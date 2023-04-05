@@ -12,12 +12,41 @@ public class DialogueManager : MonoBehaviour
     public Scenes currentScene;
     public static bool finished;
     private State state = State.COMPLETED;
+    public bool appearComputer;
+    private Animator animator;
+    private bool isHidden = false;
 
     private IEnumerator lineAppear;
 
     private enum State
     {
         PLAYING, COMPLETED
+    }
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
+    public void Hide()
+    {
+        if (!isHidden)
+        {
+            animator.SetTrigger("Hide");
+            isHidden = true;
+        }
+        
+    }
+
+    public void Show()
+    {
+        animator.SetTrigger("Show");
+        isHidden = false;
+    }
+
+    public void ClearText()
+    {
+        barText.text = "";
     }
     
     public void PlayScene(Scenes scene)
@@ -30,6 +59,16 @@ public class DialogueManager : MonoBehaviour
     public bool IsCompleted()
     {
         return state == State.COMPLETED;
+    }
+
+    public bool IsLastSentence()
+    {
+        return sentenceIndex + 1 == currentScene.sentences.Count;
+    }
+
+    public bool ChangeCat()
+    {
+        return sentenceIndex == currentScene.sentences.Count;
     }
 
     public void FinishSentence()

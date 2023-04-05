@@ -55,5 +55,5 @@ MonoBehaviour:
   - text: '[With that the cat left. Trying to go to the corner they left in, you
       see nothing, but the rest of a series of corners and walls.]'
     speaker: {fileID: 11400000, guid: 53369b81156330b418100e1ebba75579, type: 2}
-  background: {fileID: 0}
-  nextScene: {fileID: 0}
+  background: {fileID: 21300000, guid: 0b92273fcb463d848af471a328cccf4d, type: 3}
+  nextScene: {fileID: 11400000, guid: 73d22e5fd168ced4fadfc6df8620ae28, type: 2}

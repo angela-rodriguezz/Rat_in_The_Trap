@@ -4,13 +4,30 @@ using UnityEngine;
 
 public class PlayDialogue : MonoBehaviour
 {
-    public Scenes currentScene;
+    public GameScene currentScene;
     public DialogueManager bottomBar;
+    public Transition backgroundController;
+    public SelectionScreen chooseController;
+
+    private State state = State.IDLE;
+
+    private enum State
+    {
+        IDLE, ANIMATE, CHOOSE
+    }
+    
+
     // Start is called before the first frame update
     void Start()
     {
-        bottomBar.PlayScene(currentScene);
+        if (currentScene is Scenes)
+        {
+            Scenes storyScene = currentScene as Scenes;
+            bottomBar.PlayScene(storyScene);
+            backgroundController.SetImage(storyScene.background);
+        }
     }
+        
 
     // Update is called once per frame
     void Update()
@@ -19,7 +36,21 @@ public class PlayDialogue : MonoBehaviour
         {
             if (bottomBar.IsCompleted())
             {
-                bottomBar.PlayNextSentence();
+                if (bottomBar.ChangeCat())
+                {
+                    backgroundController.NoCat();
+                }
+                if (state == State.IDLE && bottomBar.IsLastSentence())
+                {
+                    backgroundController.NoCat();
+                    PlayScene((currentScene as Scenes).nextScene);
+                    
+                }
+                else
+                {
+                    bottomBar.PlayNextSentence();
+                }
+                
             } 
             else
             {
@@ -29,4 +60,31 @@ public class PlayDialogue : MonoBehaviour
             }
         }
     }
+
+    public void PlayScene(GameScene scene)
+    {
+        StartCoroutine(SwitchScene(scene));
+    }
+
+    private IEnumerator SwitchScene(GameScene scene)
+    {
+        state = State.ANIMATE;
+        currentScene = scene;
+        if (scene is Scenes)
+        {
+            Scenes storyScene = scene as Scenes;
+            backgroundController.SwitchImage(storyScene.background);
+            yield return new WaitForSeconds(1f);
+            
+            yield return new WaitForSeconds(1f);
+            bottomBar.PlayScene(storyScene);
+            state = State.IDLE;
+        }
+        else if (scene is ChooseScene)
+        {
+            state = State.CHOOSE;
+            chooseController.SetupChoose(scene as ChooseScene);
+        }
+    }
+
 }
