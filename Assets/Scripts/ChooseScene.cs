@@ -16,9 +16,7 @@ public class ChooseScene : GameScene
     {
         public string text;
         public Scenes nextScene;
-        public Button Option1;
-        public Button Option2;
-        public Button Option3;
+       
     }
     
 }
