@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class Scenes : GameScene
 {
+    public string sceneName;
     public List<Sentence> sentences;
     public Sprite background;
     public GameScene nextScene;

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d916694e20bc9cb4d818768a0bad1511, type: 3}
   m_Name: FinishedScene
   m_EditorClassIdentifier: 
+  sceneName: 
   sentences:
   - text: "That\u2019s the end of the starting test. We\u2019ll discuss amongst ourselves
       about your candidacy and not get back to you. Goodbye! "
@@ -30,4 +31,4 @@ MonoBehaviour:
       here, as if this event was intended only for you.]'
     speaker: {fileID: 11400000, guid: 53369b81156330b418100e1ebba75579, type: 2}
   background: {fileID: 21300000, guid: 87c1b7779ece28b49a181d4725fa8ab6, type: 3}
-  nextScene: {fileID: 0}
+  nextScene: {fileID: 11400000, guid: 2330e63eaa1a29c45b1e4a78b33c3c62, type: 2}

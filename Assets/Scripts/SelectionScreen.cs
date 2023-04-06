@@ -29,7 +29,7 @@ public class SelectionScreen : MonoBehaviour
 
     public void SetupChoose(ChooseScene scene)
     {
-        DestroyLabels();
+        
         animator.SetTrigger("Show");
         main = scene;
 
@@ -48,17 +48,7 @@ public class SelectionScreen : MonoBehaviour
     }
     
 
-    private void DestroyLabels()
-    {
-        foreach(Transform childTransform in transform)
-        {
-            if (childTransform.gameObject.tag != "EditorOnly")
-            {
-                Destroy(childTransform.gameObject);
-            }
-            
-        }
-    }
+    
 
    
 }

@@ -14,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     private State state = State.COMPLETED;
     public bool appearComputer;
     private Animator animator;
+    public Transition catAnimator;
     private bool isHidden = false;
 
     private IEnumerator lineAppear;
@@ -109,6 +110,11 @@ public class DialogueManager : MonoBehaviour
             StopCoroutine(lineAppear);
             state = State.COMPLETED;
             finished = false;
+        }
+
+        if (currentScene.sceneName == "DangerCat")
+        {
+            catAnimator.dangerCat();
         }
     }
 }

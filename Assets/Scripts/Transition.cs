@@ -22,6 +22,16 @@ public class Transition : MonoBehaviour
         catOut = true;
     }
 
+    public void dangerCat()
+    {
+        if (catOut)
+        {
+            animator2.SetTrigger("Danger");
+            animator2.SetTrigger("Now");
+        }
+        catOut = false;
+    }
+
     public void SwitchImage(Sprite sprite)
     {
         if (!isSwitched && !(background1.sprite == (background2.sprite)))
