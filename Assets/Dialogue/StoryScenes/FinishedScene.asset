@@ -23,12 +23,6 @@ MonoBehaviour:
       without a trace. With nothing left to do, you decide to reach for the doorknob
       of the room\u2019s exit passageway.] "
     speaker: {fileID: 11400000, guid: 53369b81156330b418100e1ebba75579, type: 2}
-  - text: "[The screen which once shone the program Glimmer completely disappeared
-      without a trace. With nothing left to do, you decide to reach for the doorknob
-      of the room\u2019s exit passageway.] "
-    speaker: {fileID: 11400000, guid: 53369b81156330b418100e1ebba75579, type: 2}
-  - text: 'AGHHHH WHAT IS THIS?!? '
-    speaker: {fileID: 11400000, guid: 87536d2fdba79844e8a9aadeb4529a9e, type: 2}
   - text: 'AGHHHH WHAT IS THIS?!? '
     speaker: {fileID: 11400000, guid: 87536d2fdba79844e8a9aadeb4529a9e, type: 2}
   - text: '[Sharp, piercing needles are etched across the doorknob of the exit. Blood
