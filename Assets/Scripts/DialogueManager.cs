@@ -74,7 +74,11 @@ public class DialogueManager : MonoBehaviour
 
     public void FinishSentence()
     {
+        state = State.COMPLETED;
+        StopCoroutine(lineAppear);
+        finished = false;
         barText.text = currentScene.sentences[sentenceIndex].text;
+
     }
 
     public void PlayNextSentence()
@@ -105,12 +109,6 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (finished)
-        {
-            StopCoroutine(lineAppear);
-            state = State.COMPLETED;
-            finished = false;
-        }
 
         if (currentScene.sceneName == "DangerCat")
         {
