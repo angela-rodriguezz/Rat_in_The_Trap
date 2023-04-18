@@ -15,16 +15,7 @@ MonoBehaviour:
   labels:
   - text: 0
     nextScene: {fileID: 11400000, guid: a9e6e58207ea0c141ad93d4d6f1de328, type: 2}
-    Option1: {fileID: 0}
-    Option2: {fileID: 0}
-    Option3: {fileID: 0}
   - text: 40
     nextScene: {fileID: 11400000, guid: 8b8c4d79eb402b2479a1a4ed77f3fa4e, type: 2}
-    Option1: {fileID: 0}
-    Option2: {fileID: 0}
-    Option3: {fileID: 0}
-  - text: I don't know!
+  - text: IDK!
     nextScene: {fileID: 11400000, guid: e2c04b76590a3f342befa96b495186df, type: 2}
-    Option1: {fileID: 0}
-    Option2: {fileID: 0}
-    Option3: {fileID: 0}
