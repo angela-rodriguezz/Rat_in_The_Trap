@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
 public class ChooseOptionController : MonoBehaviour
 {
     public Color defaultColor;
@@ -16,12 +15,12 @@ public class ChooseOptionController : MonoBehaviour
     public Button btn2;
     public Button btn3;
     public TextMeshProUGUI buttonChoice1;
-    public TextMeshProUGUI buttonChoice2;
+    public TextMeshProUGUI buttonChoice2;   
     public TextMeshProUGUI buttonChoice3;
+
     // Start is called before the first frame update
     void Awake()
     {
-
         textMesh = GetComponent<TextMeshProUGUI>();
         textMesh.color = defaultColor;
     }
@@ -30,26 +29,21 @@ public class ChooseOptionController : MonoBehaviour
     { 
         btn1.onClick.AddListener(DecisionOne);
         btn2.onClick.AddListener(DecisionTwo);
-        btn3.onClick.AddListener(DecisionThree);
-       
+        btn3.onClick.AddListener(DecisionThree);  
     }
-
 
     public void DecisionOne()
     {
-        controller.PerformChoice(0);
-        
+        controller.PerformChoice(0);  
     }
+
     public void DecisionTwo()
     {
         controller.PerformChoice(1);
     }
+
     public void DecisionThree()
     {
         controller.PerformChoice(2);
     }
-
-    
-
-   
 }
