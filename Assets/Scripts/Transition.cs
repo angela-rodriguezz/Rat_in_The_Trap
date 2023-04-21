@@ -7,11 +7,12 @@ public class Transition : MonoBehaviour
 {
     public bool isSwitched = false;
     public bool catOut = false;
-    public Sprite Cat;
+    public GameObject Cat;
     public Image background1;
     public Image background2;
     public Animator animator;
     public Animator animator2;
+    public bool nextLevel;
 
     public void NoCat()
     {
@@ -30,15 +31,25 @@ public class Transition : MonoBehaviour
             animator2.SetTrigger("Now");
         }
         catOut = false;
+        
+    }
+
+    public void ReturnCat()
+    {
+        animator2.SetTrigger("Return");
+        animator2.SetTrigger("Move");
+    }
+
+    public bool CheckImage(Sprite sprite)
+    {
+        return !isSwitched && !(background1.sprite == (background2.sprite));
+        
     }
 
     public void SwitchImage(Sprite sprite)
     {
-        if (!isSwitched && !(background1.sprite == (background2.sprite)))
-        {
-            background2.sprite = sprite;
-            animator.SetTrigger("SwitchBG");
-        }
+        background2.sprite = sprite;
+        animator.SetTrigger("SwitchBG"); 
         isSwitched = !isSwitched;
     }
 
@@ -46,11 +57,13 @@ public class Transition : MonoBehaviour
     {
         if (!isSwitched)
         {
-            background1.sprite = sprite;
+            background1.sprite = sprite;      
         }
         else
         {
             background2.sprite = sprite;
+            isSwitched = false;
         }
+        
     }
 }

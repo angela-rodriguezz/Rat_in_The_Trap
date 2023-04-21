@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d916694e20bc9cb4d818768a0bad1511, type: 3}
   m_Name: SceneTwo
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: Lab
   sentences:
   - text: '[Heeding Meo''s advice, you enter the room. Bright lights from what appear
       to be screens flood your eyes as you step into the room. As you try to take

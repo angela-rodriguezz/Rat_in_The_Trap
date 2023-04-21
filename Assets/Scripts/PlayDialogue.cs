@@ -73,10 +73,12 @@ public class PlayDialogue : MonoBehaviour
         if (scene is Scenes)
         {
             Scenes storyScene = scene as Scenes;
-            backgroundController.SwitchImage(storyScene.background);
-            yield return new WaitForSeconds(1f);
+            if (backgroundController.CheckImage(storyScene.background))
+            {
+                backgroundController.SwitchImage(storyScene.background);
+                yield return new WaitForSeconds(1f);
+            }
             
-            yield return new WaitForSeconds(1f);
             bottomBar.PlayScene(storyScene);
             state = State.IDLE;
         }

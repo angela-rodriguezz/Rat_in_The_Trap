@@ -69,7 +69,7 @@ public class DialogueManager : MonoBehaviour
 
     public bool ChangeCat()
     {
-        return sentenceIndex == currentScene.sentences.Count;
+        return currentScene.sceneName != null && currentScene.sceneName == "Lab";
     }
 
     public void FinishSentence()
@@ -113,6 +113,11 @@ public class DialogueManager : MonoBehaviour
         if (currentScene.sceneName == "DangerCat")
         {
             catAnimator.dangerCat();
+        }
+
+        if (currentScene.sceneName == "CatAgain")
+        {
+            catAnimator.ReturnCat();
         }
     }
 }
