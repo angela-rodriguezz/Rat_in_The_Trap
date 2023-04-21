@@ -67,9 +67,14 @@ public class DialogueManager : MonoBehaviour
         return sentenceIndex + 1 == currentScene.sentences.Count;
     }
 
+    public bool IsFinalScene()
+    {
+        return currentScene.nextScene == null;
+    }
+
     public bool ChangeCat()
     {
-        return currentScene.sceneName != null && currentScene.sceneName == "Lab";
+        return currentScene.sceneName == "Intro";
     }
 
     public void FinishSentence()

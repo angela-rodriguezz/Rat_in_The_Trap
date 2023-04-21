@@ -19,7 +19,7 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 87536d2fdba79844e8a9aadeb4529a9e, type: 2}
   - text: '[Running through a series of corners brings you into a one-way road to
       an underground cave. You found it interesting to see a path of railway tracks
-      that trace into the cave.]]'
+      that trace into the cave.]'
     speaker: {fileID: 11400000, guid: 53369b81156330b418100e1ebba75579, type: 2}
   - text: HEY WAIT! I WANT TO TALK TO YOU.
     speaker: {fileID: 11400000, guid: ef71f286f810f9f488286d99fa7d2811, type: 2}
@@ -27,7 +27,7 @@ MonoBehaviour:
       not liking my choices.
     speaker: {fileID: 11400000, guid: 87536d2fdba79844e8a9aadeb4529a9e, type: 2}
   - text: '[Only one choice was on your mind and that was to go in. You enter into
-      the rideable cart that was in the mouth of the cave and traverse into the unknown.]]'
+      the rideable cart that was in the mouth of the cave and traverse into the unknown.]'
     speaker: {fileID: 11400000, guid: 53369b81156330b418100e1ebba75579, type: 2}
   background: {fileID: 21300000, guid: df2ba37af8f847e48b427d6cdb1050ba, type: 3}
   nextScene: {fileID: 11400000, guid: 69dc4b0fae60e2948aa1f6986174aa12, type: 2}

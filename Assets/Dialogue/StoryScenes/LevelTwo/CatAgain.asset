@@ -45,6 +45,6 @@ MonoBehaviour:
   - text: '[You both enter into the elevator. Two buttons appear before you. GROUND
       and LAB were labeled in each button. You click LAB and head together to the
       top of the maze.] '
-    speaker: {fileID: 11400000, guid: ef71f286f810f9f488286d99fa7d2811, type: 2}
+    speaker: {fileID: 11400000, guid: 53369b81156330b418100e1ebba75579, type: 2}
   background: {fileID: 21300000, guid: 76696065d90a0a247972a8141fcb67b6, type: 3}
   nextScene: {fileID: 0}

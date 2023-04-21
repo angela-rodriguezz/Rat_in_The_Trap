@@ -36,8 +36,12 @@ public class Transition : MonoBehaviour
 
     public void ReturnCat()
     {
-        animator2.SetTrigger("Return");
-        animator2.SetTrigger("Move");
+        if (!catOut)
+        {
+            animator2.SetTrigger("Return");
+            animator2.SetTrigger("Move");
+        }
+        catOut = true;
     }
 
     public bool CheckImage(Sprite sprite)
@@ -49,8 +53,11 @@ public class Transition : MonoBehaviour
     public void SwitchImage(Sprite sprite)
     {
         background2.sprite = sprite;
-        animator.SetTrigger("SwitchBG"); 
+        animator.SetTrigger("SwitchBG");
         isSwitched = !isSwitched;
+        SetImage(sprite);
+        isSwitched = !isSwitched;
+
     }
 
     public void SetImage(Sprite sprite)

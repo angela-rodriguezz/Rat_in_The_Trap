@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayDialogue : MonoBehaviour
 {
@@ -34,17 +35,19 @@ public class PlayDialogue : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            if (bottomBar.IsCompleted())
+            if (bottomBar.IsCompleted() && bottomBar.IsLastSentence() && bottomBar.IsFinalScene())
             {
-                if (bottomBar.ChangeCat())
+                StartCoroutine(EnterLoad());
+            }
+            else if (bottomBar.IsCompleted())
+            {
+                if (bottomBar.ChangeCat() && bottomBar.IsLastSentence())
                 {
                     backgroundController.NoCat();
                 }
                 if (state == State.IDLE && bottomBar.IsLastSentence())
                 {
-                    backgroundController.NoCat();
                     PlayScene((currentScene as Scenes).nextScene);
-                    
                 }
                 else
                 {
@@ -55,10 +58,16 @@ public class PlayDialogue : MonoBehaviour
             else
             {
                 DialogueManager.finished = true;
-                bottomBar.FinishSentence();
-                
+                bottomBar.FinishSentence();  
             }
+
         }
+    }
+
+    private IEnumerator EnterLoad()
+    {
+        yield return new WaitForSeconds(0.05f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void PlayScene(GameScene scene)
