@@ -20,5 +20,5 @@ MonoBehaviour:
       killed your friend too! Well, hopefully that doesn\u2019t weigh too heavily
       on your conscience! "
     speaker: {fileID: 11400000, guid: a7b790a633195f44b91a664d4dbaf794, type: 2}
-  background: {fileID: 21300000, guid: 6387689c1039ee7428090e4e791ff7c1, type: 3}
+  background: {fileID: 0}
   nextScene: {fileID: 11400000, guid: 7f9b589007e094c4a996ac34882ec29a, type: 2}

@@ -46,31 +46,35 @@ public class Transition : MonoBehaviour
 
     public bool CheckImage(Sprite sprite)
     {
-        return !isSwitched && !(background1.sprite == (background2.sprite));
-        
+        return sprite != null;
     }
 
     public void SwitchImage(Sprite sprite)
     {
-        background2.sprite = sprite;
-        animator.SetTrigger("SwitchBG");
-        isSwitched = !isSwitched;
         SetImage(sprite);
-        isSwitched = !isSwitched;
+    }
 
+    public void StartImage(Sprite sprite)
+    {
+        background1.sprite = sprite;
     }
 
     public void SetImage(Sprite sprite)
     {
         if (!isSwitched)
         {
-            background1.sprite = sprite;      
-        }
-        else
-        {
             background2.sprite = sprite;
-            isSwitched = false;
+            animator.SetTrigger("SwitchBG");
+            isSwitched = !isSwitched;
+        }
+        else if (isSwitched)
+        {
+            background1.sprite = sprite;
+            animator.SetTrigger("ReverseBG");
+            isSwitched = !isSwitched;
+            
         }
         
     }
+    
 }

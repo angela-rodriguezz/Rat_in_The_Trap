@@ -18,5 +18,5 @@ MonoBehaviour:
       to use his phone during a movie? Because disrupting others'' enjoyment would
       violate the principle of respect for persons." '
     speaker: {fileID: 11400000, guid: a7b790a633195f44b91a664d4dbaf794, type: 2}
-  background: {fileID: 21300000, guid: 6387689c1039ee7428090e4e791ff7c1, type: 3}
+  background: {fileID: 0}
   nextScene: {fileID: 11400000, guid: ba92bbf74b07fbc45b4fb2a209cf7e8a, type: 2}

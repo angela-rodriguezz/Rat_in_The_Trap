@@ -30,5 +30,5 @@ MonoBehaviour:
       seeps from your hand that opened the door knob. You remember who invited you
       here, as if this event was intended only for you.]'
     speaker: {fileID: 11400000, guid: 53369b81156330b418100e1ebba75579, type: 2}
-  background: {fileID: 21300000, guid: 87c1b7779ece28b49a181d4725fa8ab6, type: 3}
+  background: {fileID: 0}
   nextScene: {fileID: 11400000, guid: 2330e63eaa1a29c45b1e4a78b33c3c62, type: 2}

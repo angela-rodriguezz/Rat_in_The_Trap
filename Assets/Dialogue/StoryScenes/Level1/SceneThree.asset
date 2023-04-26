@@ -16,5 +16,5 @@ MonoBehaviour:
   sentences:
   - text: What is (10X10) + 1?
     speaker: {fileID: 11400000, guid: a7b790a633195f44b91a664d4dbaf794, type: 2}
-  background: {fileID: 21300000, guid: 87c1b7779ece28b49a181d4725fa8ab6, type: 3}
+  background: {fileID: 0}
   nextScene: {fileID: 11400000, guid: 8319d0d0877fd344c84df7c352e088ef, type: 2}

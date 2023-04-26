@@ -25,7 +25,7 @@ public class PlayDialogue : MonoBehaviour
         {
             Scenes storyScene = currentScene as Scenes;
             bottomBar.PlayScene(storyScene);
-            backgroundController.SetImage(storyScene.background);
+            backgroundController.StartImage(storyScene.background);
         }
     }
         
@@ -82,7 +82,7 @@ public class PlayDialogue : MonoBehaviour
         if (scene is Scenes)
         {
             Scenes storyScene = scene as Scenes;
-            if (backgroundController.CheckImage(storyScene.background))
+            if (backgroundController.CheckImage(storyScene.background) && bottomBar.IsLastSentence())
             {
                 backgroundController.SwitchImage(storyScene.background);
                 yield return new WaitForSeconds(1f);

@@ -62,6 +62,11 @@ public class DialogueManager : MonoBehaviour
         return state == State.COMPLETED;
     }
 
+    public bool IsFirstSentence()
+    {
+        return currentScene.sceneName == "Start";
+    }
+
     public bool IsLastSentence()
     {
         return sentenceIndex + 1 == currentScene.sentences.Count;

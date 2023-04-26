@@ -34,5 +34,5 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 87536d2fdba79844e8a9aadeb4529a9e, type: 2}
   - text: "You have 15 seconds to decide. We\u2019re excited to observe your decision! "
     speaker: {fileID: 11400000, guid: a7b790a633195f44b91a664d4dbaf794, type: 2}
-  background: {fileID: 21300000, guid: 6387689c1039ee7428090e4e791ff7c1, type: 3}
+  background: {fileID: 21300000, guid: 482abfd89705e344688eaed3783403ed, type: 3}
   nextScene: {fileID: 11400000, guid: 8527f05185ffbe747b9343bdc3838cfb, type: 2}
