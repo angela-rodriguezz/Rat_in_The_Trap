@@ -14,15 +14,13 @@ public class ChooseOptionController : MonoBehaviour
     public Button btn1;
     public Button btn2;
     public Button btn3;
-    public TextMeshProUGUI buttonChoice1;
-    public TextMeshProUGUI buttonChoice2;   
-    public TextMeshProUGUI buttonChoice3;
+    
 
     // Start is called before the first frame update
     void Awake()
     {
         textMesh = GetComponent<TextMeshProUGUI>();
-        textMesh.color = defaultColor;
+        
     }
 
     void Start()

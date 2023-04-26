@@ -62,10 +62,6 @@ public class DialogueManager : MonoBehaviour
         return state == State.COMPLETED;
     }
 
-    public bool IsFirstSentence()
-    {
-        return currentScene.sceneName == "Start";
-    }
 
     public bool IsLastSentence()
     {
@@ -93,10 +89,12 @@ public class DialogueManager : MonoBehaviour
 
     public void PlayNextSentence()
     {
+        
         lineAppear = TypeText(currentScene.sentences[++sentenceIndex].text);
         StartCoroutine(lineAppear);
         personNameText.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
         personNameText.color = currentScene.sentences[sentenceIndex].speaker.textColor;
+            
     }
 
     private IEnumerator TypeText(string text)
