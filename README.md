@@ -8,7 +8,8 @@ Play as Ciara and meet interesting characters like Miao and Glimmer! Try to esca
 
 [Visit the game here!](https://somememe.itch.io/rat-in-the-trap)
 
-<br><br>
-# Game Trailer <a name="Trailer"></a> <br>
-[![Trailer](https://www.youtube.com/watch?v=hVgRdOQv_ZY.jpg)](https://www.youtube.com/watch?v=hVgRdOQv_ZY)<br>
-<br><br>
+# Game Trailer 
+[[GDD Spring 23] Rat in the Trap Trailer](https://www.youtube.com/watch?v=hVgRdOQv_ZY)
+
+[![Trailer](https://media.discordapp.net/attachments/1081055450860093451/1101755847228534784/7AdSyR.png?width=867&height=485)](https://www.youtube.com/watch?v=hVgRdOQv_ZY)
+
