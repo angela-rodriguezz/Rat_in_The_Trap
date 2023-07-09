@@ -16,6 +16,7 @@ Play as Ciara and meet interesting characters like Miao and Glimmer! Try to esca
 # Credits:
 
 Programming: Angela Rodriguez, Andrew Deakin, Jun Hyung Lee
+
 Artists: Yu Jun, Sam
 
 
