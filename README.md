@@ -18,5 +18,6 @@ Play as Ciara and meet interesting characters like Miao and Glimmer! Try to esca
 - Programming: Angela Rodriguez, Andrew Deakin, Jun Hyung Lee, Sameem Saleem
 - Narrative: Angela Rodriguez, Andrew Deakin
 - Artists & Design: Yu Jun, Sameem Saleem
+- Music: Jun Hyung Lee
 
 
